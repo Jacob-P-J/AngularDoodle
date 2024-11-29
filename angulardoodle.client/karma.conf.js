@@ -1,13 +1,14 @@
-﻿module.exports = function (config) {
+/* eslint-disable no-undef */
+export default function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      import('karma-jasmine'),
+      import('karma-chrome-launcher'),
+      import('karma-jasmine-html-reporter'),
+      import('karma-coverage'),
+      import('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
       jasmine: {
@@ -22,7 +23,7 @@
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/'),
+      dir: import('path').join(__dirname, './coverage/'),
       subdir: '.',
       reporters: [
         { type: 'html' },
