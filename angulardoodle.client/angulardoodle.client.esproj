@@ -8,7 +8,7 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\angulardoodle.client\browser\</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\app\Units\utils\" />
-    <Folder Include="src\app\Units\types\" />
+    <Folder Include="src\app\units\utils\" />
+    <Folder Include="src\app\units\types\" />
   </ItemGroup>
 </Project>
