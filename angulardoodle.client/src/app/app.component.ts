@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Unit } from './units/unit.model'; 
+import { Component, OnInit } from '@angular/core';
+import { Unit } from './units/unit.model';
+import { MessageService, Message } from './message.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,30 @@ import { Unit } from './units/unit.model';
 export class AppComponent {
   // Naming of title
   title = 'AngularDoodle.client';
+
+
+  // Initiating variable message
+  message: string = '';
+
+  // Constructor to set message from service
+  constructor(private messageService: MessageService) { }
+
+
+  ngOnInit() {
+    this.getMessage();
+  }
+
+  // Function to set message to message from service
+  getMessage() {
+    this.messageService.getMessageFromServer().subscribe(
+      (response: Message) => {
+        this.message = response.text;
+      },
+      (error) => {
+        console.error('Error fetching message from server', error)
+      }
+    );
+  }
 
   // Dummy data
   units: Unit[] = [
