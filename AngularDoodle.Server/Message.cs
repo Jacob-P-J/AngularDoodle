@@ -2,6 +2,6 @@
 {
     public class Message
     {
-       public String Text { get; set; }
+       public string? Text { get; set; }
     }
 }

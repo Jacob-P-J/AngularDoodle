@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Unit } from './units/unit.model';
+
+import { Unit } from './units/types/unit.type';
+import { UnitService } from './units/utils/unit.service';
 import { MessageService, Message } from './message.service';
 
 
@@ -16,12 +18,27 @@ export class AppComponent {
   // Initiating variable message
   message: string = '';
 
-  // Constructor to set message from service
-  constructor(private messageService: MessageService) { }
+  // Initiating variables for unit
+  units: Unit[] = [];
+  sortColumn: string = '';
+  sortDirection: 'asc' | 'desc' = 'asc';
 
+  // Initiating variables for pagination
+  currentPage: number = 1;
+  pageSize: number = 25;
+  totalUnits: number = 100;
 
+  // Constructor for services
+  constructor(
+    private messageService: MessageService,
+    private unitService: UnitService
+  ) { }
+
+  // Gets data from server on init
   ngOnInit() {
+    this.currentPage = 1;
     this.getMessage();
+    this.goToPage(this.currentPage);
   }
 
   // Function to set message to message from service
@@ -36,38 +53,47 @@ export class AppComponent {
     );
   }
 
-  // Dummy data
-  units: Unit[] = [
-    { id: 1, name: 'Formaldehyde', casNumber: '50-00-0', amount: 10, location: 'Location 1' },
-    { id: 2, name: 'Ethanol', casNumber: '64-17-5', amount: 20, location: 'Location 2' },
-    { id: 3, name: 'Methanol', casNumber: '67-56-1', amount: 30, location: 'Location 3' },
-    { id: 4, name: 'Acetone', casNumber: '67-64-1', amount: 40, location: 'Location 4' },
-    { id: 5, name: 'Benzene', casNumber: '71-43-2', amount: 50, location: 'Location 5' },
-    { id: 6, name: 'Toluene', casNumber: '108-88-3', amount: 60, location: 'Location 6' },
-    { id: 7, name: 'Chloroform', casNumber: '67-66-3', amount: 70, location: 'Location 7' },
-    { id: 8, name: 'Hexane', casNumber: '110-54-3', amount: 80, location: 'Location 8' },
-    { id: 9, name: 'Phenol', casNumber: '108-95-2', amount: 90, location: 'Location 9' },
-    { id: 10, name: 'Acetic Acid', casNumber: '64-19-7', amount: 100, location: 'Location 10' },
-    { id: 11, name: 'Formaldehyde', casNumber: '50-00-0', amount: 15, location: 'Location 11' },
-    { id: 12, name: 'Ethanol', casNumber: '64-17-5', amount: 25, location: 'Location 12' },
-    { id: 13, name: 'Methanol', casNumber: '67-56-1', amount: 35, location: 'Location 13' },
-    { id: 14, name: 'Acetone', casNumber: '67-64-1', amount: 45, location: 'Location 14' },
-    { id: 15, name: 'Benzene', casNumber: '71-43-2', amount: 55, location: 'Location 15' },
-    { id: 16, name: 'Toluene', casNumber: '108-88-3', amount: 65, location: 'Location 16' },
-    { id: 17, name: 'Chloroform', casNumber: '67-66-3', amount: 75, location: 'Location 17' },
-    { id: 18, name: 'Hexane', casNumber: '110-54-3', amount: 85, location: 'Location 18' },
-    { id: 19, name: 'Phenol', casNumber: '108-95-2', amount: 95, location: 'Location 19' },
-    { id: 20, name: 'Acetic Acid', casNumber: '64-19-7', amount: 105, location: 'Location 20' },
-    { id: 21, name: 'Formaldehyde', casNumber: '50-00-0', amount: 10, location: 'Location 1' },
-    { id: 22, name: 'Ethanol', casNumber: '64-17-5', amount: 20, location: 'Location 2' },
-    { id: 23, name: 'Methanol', casNumber: '67-56-1', amount: 30, location: 'Location 3' },
-    { id: 24, name: 'Acetone', casNumber: '67-64-1', amount: 40, location: 'Location 4' },
-    { id: 25, name: 'Benzene', casNumber: '71-43-2', amount: 50, location: 'Location 5' }
-  ];
+  // Function to set units to units from service
+  getUnits() {
+    this.unitService.getUnits(this.currentPage, this.pageSize).subscribe(
+      (response: Unit[]) => {
+        this.units = response;
+      },
+      (error) => {
+        console.error('Error fetching units from server', error)
+      }
+    );
+  }
 
-  // Sorting of units
-  sortColumn: string = '';
-  sortDirection: 'asc' | 'desc' = 'asc';
+  // Dummy data
+  //units: Unit[] = [
+  //  { id: 1, name: 'Formaldehyde', casNumber: '50-00-0', amount: 10, location: 'Location 1' },
+  //  { id: 2, name: 'Ethanol', casNumber: '64-17-5', amount: 20, location: 'Location 2' },
+  //  { id: 3, name: 'Methanol', casNumber: '67-56-1', amount: 30, location: 'Location 3' },
+  //  { id: 4, name: 'Acetone', casNumber: '67-64-1', amount: 40, location: 'Location 4' },
+  //  { id: 5, name: 'Benzene', casNumber: '71-43-2', amount: 50, location: 'Location 5' },
+  //  { id: 6, name: 'Toluene', casNumber: '108-88-3', amount: 60, location: 'Location 6' },
+  //  { id: 7, name: 'Chloroform', casNumber: '67-66-3', amount: 70, location: 'Location 7' },
+  //  { id: 8, name: 'Hexane', casNumber: '110-54-3', amount: 80, location: 'Location 8' },
+  //  { id: 9, name: 'Phenol', casNumber: '108-95-2', amount: 90, location: 'Location 9' },
+  //  { id: 10, name: 'Acetic Acid', casNumber: '64-19-7', amount: 100, location: 'Location 10' },
+  //  { id: 11, name: 'Formaldehyde', casNumber: '50-00-0', amount: 15, location: 'Location 11' },
+  //  { id: 12, name: 'Ethanol', casNumber: '64-17-5', amount: 25, location: 'Location 12' },
+  //  { id: 13, name: 'Methanol', casNumber: '67-56-1', amount: 35, location: 'Location 13' },
+  //  { id: 14, name: 'Acetone', casNumber: '67-64-1', amount: 45, location: 'Location 14' },
+  //  { id: 15, name: 'Benzene', casNumber: '71-43-2', amount: 55, location: 'Location 15' },
+  //  { id: 16, name: 'Toluene', casNumber: '108-88-3', amount: 65, location: 'Location 16' },
+  //  { id: 17, name: 'Chloroform', casNumber: '67-66-3', amount: 75, location: 'Location 17' },
+  //  { id: 18, name: 'Hexane', casNumber: '110-54-3', amount: 85, location: 'Location 18' },
+  //  { id: 19, name: 'Phenol', casNumber: '108-95-2', amount: 95, location: 'Location 19' },
+  //  { id: 20, name: 'Acetic Acid', casNumber: '64-19-7', amount: 105, location: 'Location 20' },
+  //  { id: 21, name: 'Formaldehyde', casNumber: '50-00-0', amount: 10, location: 'Location 1' },
+  //  { id: 22, name: 'Ethanol', casNumber: '64-17-5', amount: 20, location: 'Location 2' },
+  //  { id: 23, name: 'Methanol', casNumber: '67-56-1', amount: 30, location: 'Location 3' },
+  //  { id: 24, name: 'Acetone', casNumber: '67-64-1', amount: 40, location: 'Location 4' },
+  //  { id: 25, name: 'Benzene', casNumber: '71-43-2', amount: 50, location: 'Location 5' }
+  //];
+
 
   sortUnits(column: string) {
     if (this.sortColumn === column) {
@@ -89,5 +115,14 @@ export class AppComponent {
         return 0;
       }
     });
+  }
+
+  goToPage(page: number) {
+    this.currentPage = page;
+    this.getUnits();
+  }
+
+  trackByUnitId(index: number, unit: Unit): number {
+    return unit.id;
   }
 }
