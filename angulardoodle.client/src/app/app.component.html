@@ -2,90 +2,30 @@
 <table>
   <thead>
     <tr>
-      @if (sortColumn === 'name') {
-      @if (sortDirection === 'asc') {
       <th>
         <button (click)="sortUnits('name')">
-          Name &#9650;
+          Name {{ sortColumn === 'name' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
         </button>
       </th>
-      }
-      @if (sortDirection === 'desc') {
-      <th>
-        <button (click)="sortUnits('name')">
-          Name &#9660;
-        </button>
-      </th>
-      }
-      } @else {
-      <th>
-        <button (click)="sortUnits('name')">Name</button>
-      </th>
-      }
-      @if (sortColumn === 'casNumber') {
-      @if (sortDirection === 'asc') {
       <th>
         <button (click)="sortUnits('casNumber')">
-          CAS Number &#9650;
+          CAS Number {{ sortColumn === 'casNumber' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
         </button>
       </th>
-      }
-      @if (sortDirection === 'desc') {
-      <th>
-        <button (click)="sortUnits('casNumber')">
-          CAS Number &#9660;
-        </button>
-      </th>
-      }
-      } @else {
-      <th>
-        <button (click)="sortUnits('casNumber')">CAS Number</button>
-      </th>
-      }
-      @if (sortColumn === 'amount') {
-      @if (sortDirection === 'asc') {
       <th>
         <button (click)="sortUnits('amount')">
-          Amount &#9650;
+          Amount {{ sortColumn === 'amount' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
         </button>
       </th>
-      }
-      @if (sortDirection === 'desc') {
-      <th>
-        <button (click)="sortUnits('amount')">
-          Amount &#9660;
-        </button>
-      </th>
-      }
-      } @else {
-      <th>
-        <button (click)="sortUnits('amount')">Amount</button>
-      </th>
-      }
-      @if (sortColumn === 'location') {
-      @if (sortDirection === 'asc') {
       <th>
         <button (click)="sortUnits('location')">
-          Location &#9650;
+          Location {{ sortColumn === 'location' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
         </button>
       </th>
-      }
-      @if (sortDirection === 'desc') {
-      <th>
-        <button (click)="sortUnits('location')">
-          Location &#9660;
-        </button>
-      </th>
-      }
-      } @else {
-      <th>
-        <button (click)="sortUnits('location')">Location</button>
-      </th>
-      }
     </tr>
   </thead>
   <tbody>
-    @for (unit of units; track unit.id) {
+    @for (unit of currentUnits; track unit.id) {
     <tr>
       <td>{{ unit.name }}</td>
       <td>{{ unit.casNumber }}</td>
@@ -95,4 +35,11 @@
     }
   </tbody>
 </table>
+<div class="pagination">
+  <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous Page</button>
+  @for (page of pages; track page.pageNumber) {
+  <button (click)="goToPage(page.pageNumber)" [disabled]="page.pageNumber === currentPage">{{ page.pageNumber }}</button>
+  }
+  <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next Page</button>
+</div>
 <h2>{{ message }}</h2>

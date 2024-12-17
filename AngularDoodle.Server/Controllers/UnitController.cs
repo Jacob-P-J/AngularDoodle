@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+
+using System.Reflection;
 using System.Text.Json;
+
+using AngularDoodle.Server.Models;
 
 namespace AngularDoodle.Server.Controllers
 {
@@ -17,7 +21,7 @@ namespace AngularDoodle.Server.Controllers
         }
 
         [HttpGet(Name = "GetUnits")]
-        public IActionResult Get([FromQuery] int page = 1, [FromQuery] int pageSize = 25)
+        public IActionResult Get([FromQuery] string sortColumn = "id", [FromQuery] string sortDirection = "asc")
         {
             var filePath = Path.Combine(_env.ContentRootPath, "Data", "units.json");
             if (!System.IO.File.Exists(filePath))
@@ -41,8 +45,17 @@ namespace AngularDoodle.Server.Controllers
                 return NotFound();
             }
 
-            var paginatedUnits = units.Skip((page - 1) * pageSize).Take(pageSize).ToList();
-            return Ok(paginatedUnits);
+            PropertyInfo? property = typeof(Unit).GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
+            if (property == null)
+            {
+                return BadRequest($"Invalid sort column: {sortColumn}");
+            }
+
+            units = sortDirection.ToLower() == "asc"
+                ? units.OrderBy(u => property.GetValue(u, null)).ToList()
+                : units.OrderByDescending(u => property.GetValue(u, null)).ToList();
+
+            return Ok(units);
         }
     }
 }

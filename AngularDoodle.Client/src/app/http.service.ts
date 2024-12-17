@@ -4,9 +4,10 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class HttpService {
+  private baseUrl = 'https://localhost:7010';
   constructor(private http: HttpClient) { }
 
   getFromServer<T>(url: string): Observable<T> {
-    return this.http.get<T>(url);
+    return this.http.get<T>(`${this.baseUrl}/${url}`);
   }
 }

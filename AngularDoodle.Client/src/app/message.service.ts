@@ -10,7 +10,7 @@ export class MessageService {
   constructor(private httpService: HttpService) { }
 
   getMessageFromServer(): Observable<Message> {
-    return this.httpService.getFromServer<Message>('https://localhost:7010/message/');
+    return this.httpService.getFromServer<Message>('message/');
   }
 }
 

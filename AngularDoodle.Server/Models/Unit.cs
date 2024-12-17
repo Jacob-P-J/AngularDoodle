@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AngularDoodle.Server
+namespace AngularDoodle.Server.Models
 {
     public class Unit
     {

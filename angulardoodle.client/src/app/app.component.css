@@ -1,0 +1,4 @@
+.pagination {
+  display: flex;
+  gap: 8px; /* Adjust the gap size as needed */
+}

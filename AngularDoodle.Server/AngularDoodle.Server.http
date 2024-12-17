@@ -1,6 +1,6 @@
 @AngularDoodle.Server_HostAddress = http://localhost:5101
 
-GET {{AngularDoodle.Server_HostAddress}}/weatherforecast/
+GET {{AngularDoodle.Server_HostAddress}}/unit/
 Accept: application/json
 
 ###

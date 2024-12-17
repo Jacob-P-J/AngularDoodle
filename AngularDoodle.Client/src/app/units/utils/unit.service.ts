@@ -10,7 +10,8 @@ import { Unit } from '../types/unit.type';
 })
 export class UnitService {
   constructor(private httpService: HttpService) { }
-  getUnits(page: number, pageSize: number): Observable<Unit[]> {
-    return this.httpService.getFromServer<Unit[]>(`https://localhost:7010/unit?page=${page}&pageSize=${pageSize}`);
+
+  getUnits(sortColumn: string = 'id', sortDirection: string = 'asc'): Observable<Unit[]> {
+    return this.httpService.getFromServer<Unit[]>(`unit?sortColumn=${sortColumn}&sortDirection=${sortDirection}`);
   }
 }
