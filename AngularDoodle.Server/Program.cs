@@ -1,11 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
+// Add controllers to the container
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add endpoint routing services to the container
 builder.Services.AddEndpointsApiExplorer();
+// Add swagger services to the container
 builder.Services.AddSwaggerGen();
+// add CORS services to the container
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp", 

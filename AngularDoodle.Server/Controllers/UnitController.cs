@@ -5,57 +5,86 @@ using System.Reflection;
 using System.Text.Json;
 
 using AngularDoodle.Server.Models;
+using System.Runtime.CompilerServices;
 
 namespace AngularDoodle.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     [EnableCors("AllowAngularApp")]
+    // A controller that returns a list of units
     public class UnitController : ControllerBase
     {
-        private readonly IWebHostEnvironment _env;
-
-        public UnitController(IWebHostEnvironment env)
-        {
-            _env = env;
-        }
+        
+        private readonly string _filePath = "Data/units.json";
 
         [HttpGet(Name = "GetUnits")]
-        public IActionResult Get([FromQuery] string sortColumn = "id", [FromQuery] string sortDirection = "asc")
+        // GET request that returns a list of units
+        // The list is read from a JSON file and can be sorted by a column
+        public async Task<IActionResult> GetUnits(
+            [FromQuery] string sortColumn = "Id",
+            [FromQuery] string sortDirection = "asc",
+            [FromQuery] string searchName = "",
+            [FromQuery] string searchCas = "",
+            [FromQuery] int? searchAmount = null,
+            [FromQuery] string searchLocation = "")
         {
-            var filePath = Path.Combine(_env.ContentRootPath, "Data", "units.json");
-            if (!System.IO.File.Exists(filePath))
+            try
             {
-                return NotFound("The units.json file was not found.");
+                var units = await GetUnitsFromJsonFile();
+
+                if (!string.IsNullOrEmpty(searchName))
+                {
+                    units = units.Where(u => u.Name?.Contains(searchName, StringComparison.OrdinalIgnoreCase) == true).ToList();
+                }
+
+                if (!string.IsNullOrEmpty(searchCas))
+                {
+                    units = units.Where(u => u.CasNumber?.Contains(searchCas, StringComparison.OrdinalIgnoreCase) == true).ToList();
+                }
+
+                if (searchAmount != null)
+                {
+                    units = units.Where(u => u.Amount <= searchAmount).ToList();
+                }
+
+                if (!string.IsNullOrEmpty(searchLocation))
+                {
+                    units = units.Where(u => u.Location?.Contains(searchLocation, StringComparison.OrdinalIgnoreCase) == true).ToList();
+                }
+
+                units = sortDirection.ToLower() == "asc"
+                    ? units.OrderBy(u => u.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance).GetValue(u, null)).ToList()
+                    : units.OrderByDescending(u => u.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance).GetValue(u, null)).ToList();
+
+                return Ok(units);
             }
-            var jsonData = System.IO.File.ReadAllText(filePath);
-            List<Unit>? units;
-            try 
+            catch (Exception ex)
             {
-                units = JsonSerializer.Deserialize<List<Unit>>(jsonData);
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"Error: {ex.Message}");
+                return StatusCode(500, "Internal server error");
             }
-            catch (JsonException ex)
-            {
-                return BadRequest($"Error deserializing JSON data: {ex.Message}");
-            }
+        }
 
 
-            if (units == null)
+        private async Task<List<Unit>> GetUnitsFromJsonFile()
+        {
+            try
             {
-                return NotFound();
+                using (var reader = new StreamReader(_filePath))
+                {
+                    var jsonFile = await reader.ReadToEndAsync();
+                    return JsonSerializer.Deserialize<List<Unit>>(jsonFile);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"Error reading JSON file: {ex.Message}");
+                throw;
             }
 
-            PropertyInfo? property = typeof(Unit).GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
-            if (property == null)
-            {
-                return BadRequest($"Invalid sort column: {sortColumn}");
-            }
-
-            units = sortDirection.ToLower() == "asc"
-                ? units.OrderBy(u => property.GetValue(u, null)).ToList()
-                : units.OrderByDescending(u => property.GetValue(u, null)).ToList();
-
-            return Ok(units);
         }
     }
 }

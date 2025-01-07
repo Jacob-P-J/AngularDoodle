@@ -1,702 +1,702 @@
 [
   {
-    "id": 1,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 10,
-    "location": "Location 1"
+    "Id": 1,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 10,
+    "Location": "Location 1"
   },
   {
-    "id": 2,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 20,
-    "location": "Location 2"
+    "Id": 2,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 20,
+    "Location": "Location 2"
   },
   {
-    "id": 3,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 30,
-    "location": "Location 3"
+    "Id": 3,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 30,
+    "Location": "Location 3"
   },
   {
-    "id": 4,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 40,
-    "location": "Location 4"
+    "Id": 4,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 40,
+    "Location": "Location 4"
   },
   {
-    "id": 5,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 50,
-    "location": "Location 5"
+    "Id": 5,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 50,
+    "Location": "Location 5"
   },
   {
-    "id": 6,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 60,
-    "location": "Location 6"
+    "Id": 6,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 60,
+    "Location": "Location 6"
   },
   {
-    "id": 7,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 70,
-    "location": "Location 7"
+    "Id": 7,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 70,
+    "Location": "Location 7"
   },
   {
-    "id": 8,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 80,
-    "location": "Location 8"
+    "Id": 8,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 80,
+    "Location": "Location 8"
   },
   {
-    "id": 9,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 90,
-    "location": "Location 9"
+    "Id": 9,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 90,
+    "Location": "Location 9"
   },
   {
-    "id": 10,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 100,
-    "location": "Location 10"
+    "Id": 10,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 100,
+    "Location": "Location 10"
   },
   {
-    "id": 11,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 15,
-    "location": "Location 11"
+    "Id": 11,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 15,
+    "Location": "Location 11"
   },
   {
-    "id": 12,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 25,
-    "location": "Location 12"
+    "Id": 12,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 25,
+    "Location": "Location 12"
   },
   {
-    "id": 13,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 35,
-    "location": "Location 13"
+    "Id": 13,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 35,
+    "Location": "Location 13"
   },
   {
-    "id": 14,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 45,
-    "location": "Location 14"
+    "Id": 14,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 45,
+    "Location": "Location 14"
   },
   {
-    "id": 15,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 55,
-    "location": "Location 15"
+    "Id": 15,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 55,
+    "Location": "Location 15"
   },
   {
-    "id": 16,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 65,
-    "location": "Location 16"
+    "Id": 16,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 65,
+    "Location": "Location 16"
   },
   {
-    "id": 17,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 75,
-    "location": "Location 17"
+    "Id": 17,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 75,
+    "Location": "Location 17"
   },
   {
-    "id": 18,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 85,
-    "location": "Location 18"
+    "Id": 18,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 85,
+    "Location": "Location 18"
   },
   {
-    "id": 19,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 95,
-    "location": "Location 19"
+    "Id": 19,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 95,
+    "Location": "Location 19"
   },
   {
-    "id": 20,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 105,
-    "location": "Location 20"
+    "Id": 20,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 105,
+    "Location": "Location 20"
   },
   {
-    "id": 21,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 10,
-    "location": "Location 1"
+    "Id": 21,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 10,
+    "Location": "Location 1"
   },
   {
-    "id": 22,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 20,
-    "location": "Location 2"
+    "Id": 22,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 20,
+    "Location": "Location 2"
   },
   {
-    "id": 23,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 30,
-    "location": "Location 3"
+    "Id": 23,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 30,
+    "Location": "Location 3"
   },
   {
-    "id": 24,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 40,
-    "location": "Location 4"
+    "Id": 24,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 40,
+    "Location": "Location 4"
   },
   {
-    "id": 25,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 50,
-    "location": "Location 5"
+    "Id": 25,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 50,
+    "Location": "Location 5"
   },
   {
-    "id": 26,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 15,
-    "location": "Location 26"
+    "Id": 26,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 15,
+    "Location": "Location 26"
   },
   {
-    "id": 27,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 25,
-    "location": "Location 27"
+    "Id": 27,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 25,
+    "Location": "Location 27"
   },
   {
-    "id": 28,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 35,
-    "location": "Location 28"
+    "Id": 28,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 35,
+    "Location": "Location 28"
   },
   {
-    "id": 29,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 45,
-    "location": "Location 29"
+    "Id": 29,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 45,
+    "Location": "Location 29"
   },
   {
-    "id": 30,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 55,
-    "location": "Location 30"
+    "Id": 30,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 55,
+    "Location": "Location 30"
   },
   {
-    "id": 31,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 65,
-    "location": "Location 31"
+    "Id": 31,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 65,
+    "Location": "Location 31"
   },
   {
-    "id": 32,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 75,
-    "location": "Location 32"
+    "Id": 32,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 75,
+    "Location": "Location 32"
   },
   {
-    "id": 33,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 85,
-    "location": "Location 33"
+    "Id": 33,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 85,
+    "Location": "Location 33"
   },
   {
-    "id": 34,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 95,
-    "location": "Location 34"
+    "Id": 34,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 95,
+    "Location": "Location 34"
   },
   {
-    "id": 35,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 105,
-    "location": "Location 35"
+    "Id": 35,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 105,
+    "Location": "Location 35"
   },
   {
-    "id": 36,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 10,
-    "location": "Location 36"
+    "Id": 36,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 10,
+    "Location": "Location 36"
   },
   {
-    "id": 37,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 20,
-    "location": "Location 37"
+    "Id": 37,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 20,
+    "Location": "Location 37"
   },
   {
-    "id": 38,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 30,
-    "location": "Location 38"
+    "Id": 38,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 30,
+    "Location": "Location 38"
   },
   {
-    "id": 39,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 40,
-    "location": "Location 39"
+    "Id": 39,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 40,
+    "Location": "Location 39"
   },
   {
-    "id": 40,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 50,
-    "location": "Location 40"
+    "Id": 40,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 50,
+    "Location": "Location 40"
   },
   {
-    "id": 41,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 60,
-    "location": "Location 41"
+    "Id": 41,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 60,
+    "Location": "Location 41"
   },
   {
-    "id": 42,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 70,
-    "location": "Location 42"
+    "Id": 42,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 70,
+    "Location": "Location 42"
   },
   {
-    "id": 43,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 80,
-    "location": "Location 43"
+    "Id": 43,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 80,
+    "Location": "Location 43"
   },
   {
-    "id": 44,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 90,
-    "location": "Location 44"
+    "Id": 44,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 90,
+    "Location": "Location 44"
   },
   {
-    "id": 45,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 100,
-    "location": "Location 45"
+    "Id": 45,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 100,
+    "Location": "Location 45"
   },
   {
-    "id": 46,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 15,
-    "location": "Location 46"
+    "Id": 46,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 15,
+    "Location": "Location 46"
   },
   {
-    "id": 47,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 25,
-    "location": "Location 47"
+    "Id": 47,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 25,
+    "Location": "Location 47"
   },
   {
-    "id": 48,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 35,
-    "location": "Location 48"
+    "Id": 48,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 35,
+    "Location": "Location 48"
   },
   {
-    "id": 49,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 45,
-    "location": "Location 49"
+    "Id": 49,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 45,
+    "Location": "Location 49"
   },
   {
-    "id": 50,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 55,
-    "location": "Location 50"
+    "Id": 50,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 55,
+    "Location": "Location 50"
   },
   {
-    "id": 51,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 65,
-    "location": "Location 1"
+    "Id": 51,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 65,
+    "Location": "Location 1"
   },
   {
-    "id": 52,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 75,
-    "location": "Location 2"
+    "Id": 52,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 75,
+    "Location": "Location 2"
   },
   {
-    "id": 53,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 85,
-    "location": "Location 3"
+    "Id": 53,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 85,
+    "Location": "Location 3"
   },
   {
-    "id": 54,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 95,
-    "location": "Location 4"
+    "Id": 54,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 95,
+    "Location": "Location 4"
   },
   {
-    "id": 55,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 105,
-    "location": "Location 5"
+    "Id": 55,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 105,
+    "Location": "Location 5"
   },
   {
-    "id": 56,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 10,
-    "location": "Location 6"
+    "Id": 56,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 10,
+    "Location": "Location 6"
   },
   {
-    "id": 57,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 20,
-    "location": "Location 7"
+    "Id": 57,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 20,
+    "Location": "Location 7"
   },
   {
-    "id": 58,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 30,
-    "location": "Location 8"
+    "Id": 58,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 30,
+    "Location": "Location 8"
   },
   {
-    "id": 59,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 40,
-    "location": "Location 9"
+    "Id": 59,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 40,
+    "Location": "Location 9"
   },
   {
-    "id": 60,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 50,
-    "location": "Location 10"
+    "Id": 60,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 50,
+    "Location": "Location 10"
   },
   {
-    "id": 61,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 60,
-    "location": "Location 11"
+    "Id": 61,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 60,
+    "Location": "Location 11"
   },
   {
-    "id": 62,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 70,
-    "location": "Location 12"
+    "Id": 62,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 70,
+    "Location": "Location 12"
   },
   {
-    "id": 63,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 80,
-    "location": "Location 13"
+    "Id": 63,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 80,
+    "Location": "Location 13"
   },
   {
-    "id": 64,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 90,
-    "location": "Location 14"
+    "Id": 64,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 90,
+    "Location": "Location 14"
   },
   {
-    "id": 65,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 100,
-    "location": "Location 15"
+    "Id": 65,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 100,
+    "Location": "Location 15"
   },
   {
-    "id": 66,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 15,
-    "location": "Location 16"
+    "Id": 66,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 15,
+    "Location": "Location 16"
   },
   {
-    "id": 67,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 25,
-    "location": "Location 17"
+    "Id": 67,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 25,
+    "Location": "Location 17"
   },
   {
-    "id": 68,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 35,
-    "location": "Location 18"
+    "Id": 68,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 35,
+    "Location": "Location 18"
   },
   {
-    "id": 69,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 45,
-    "location": "Location 19"
+    "Id": 69,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 45,
+    "Location": "Location 19"
   },
   {
-    "id": 70,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 55,
-    "location": "Location 20"
+    "Id": 70,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 55,
+    "Location": "Location 20"
   },
   {
-    "id": 71,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 65,
-    "location": "Location 21"
+    "Id": 71,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 65,
+    "Location": "Location 21"
   },
   {
-    "id": 72,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 75,
-    "location": "Location 22"
+    "Id": 72,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 75,
+    "Location": "Location 22"
   },
   {
-    "id": 73,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 85,
-    "location": "Location 23"
+    "Id": 73,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 85,
+    "Location": "Location 23"
   },
   {
-    "id": 74,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 95,
-    "location": "Location 24"
+    "Id": 74,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 95,
+    "Location": "Location 24"
   },
   {
-    "id": 75,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 105,
-    "location": "Location 25"
+    "Id": 75,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 105,
+    "Location": "Location 25"
   },
   {
-    "id": 76,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 10,
-    "location": "Location 26"
+    "Id": 76,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 10,
+    "Location": "Location 26"
   },
   {
-    "id": 77,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 20,
-    "location": "Location 27"
+    "Id": 77,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 20,
+    "Location": "Location 27"
   },
   {
-    "id": 78,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 30,
-    "location": "Location 28"
+    "Id": 78,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 30,
+    "Location": "Location 28"
   },
   {
-    "id": 79,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 40,
-    "location": "Location 29"
+    "Id": 79,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 40,
+    "Location": "Location 29"
   },
   {
-    "id": 80,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 50,
-    "location": "Location 30"
+    "Id": 80,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 50,
+    "Location": "Location 30"
   },
   {
-    "id": 81,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 60,
-    "location": "Location 31"
+    "Id": 81,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 60,
+    "Location": "Location 31"
   },
   {
-    "id": 82,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 70,
-    "location": "Location 32"
+    "Id": 82,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 70,
+    "Location": "Location 32"
   },
   {
-    "id": 83,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 80,
-    "location": "Location 33"
+    "Id": 83,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 80,
+    "Location": "Location 33"
   },
   {
-    "id": 84,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 90,
-    "location": "Location 34"
+    "Id": 84,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 90,
+    "Location": "Location 34"
   },
   {
-    "id": 85,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 100,
-    "location": "Location 35"
+    "Id": 85,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 100,
+    "Location": "Location 35"
   },
   {
-    "id": 86,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 15,
-    "location": "Location 36"
+    "Id": 86,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 15,
+    "Location": "Location 36"
   },
   {
-    "id": 87,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 25,
-    "location": "Location 37"
+    "Id": 87,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 25,
+    "Location": "Location 37"
   },
   {
-    "id": 88,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 35,
-    "location": "Location 38"
+    "Id": 88,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 35,
+    "Location": "Location 38"
   },
   {
-    "id": 89,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 45,
-    "location": "Location 39"
+    "Id": 89,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 45,
+    "Location": "Location 39"
   },
   {
-    "id": 90,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 55,
-    "location": "Location 40"
+    "Id": 90,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 55,
+    "Location": "Location 40"
   },
   {
-    "id": 91,
-    "name": "Toluene",
-    "casNumber": "108-88-3",
-    "amount": 65,
-    "location": "Location 41"
+    "Id": 91,
+    "Name": "Toluene",
+    "CasNumber": "108-88-3",
+    "Amount": 65,
+    "Location": "Location 41"
   },
   {
-    "id": 92,
-    "name": "Chloroform",
-    "casNumber": "67-66-3",
-    "amount": 75,
-    "location": "Location 42"
+    "Id": 92,
+    "Name": "Chloroform",
+    "CasNumber": "67-66-3",
+    "Amount": 75,
+    "Location": "Location 42"
   },
   {
-    "id": 93,
-    "name": "Hexane",
-    "casNumber": "110-54-3",
-    "amount": 85,
-    "location": "Location 43"
+    "Id": 93,
+    "Name": "Hexane",
+    "CasNumber": "110-54-3",
+    "Amount": 85,
+    "Location": "Location 43"
   },
   {
-    "id": 94,
-    "name": "Phenol",
-    "casNumber": "108-95-2",
-    "amount": 95,
-    "location": "Location 44"
+    "Id": 94,
+    "Name": "Phenol",
+    "CasNumber": "108-95-2",
+    "Amount": 95,
+    "Location": "Location 44"
   },
   {
-    "id": 95,
-    "name": "Acetic Acid",
-    "casNumber": "64-19-7",
-    "amount": 105,
-    "location": "Location 45"
+    "Id": 95,
+    "Name": "Acetic Acid",
+    "CasNumber": "64-19-7",
+    "Amount": 105,
+    "Location": "Location 45"
   },
   {
-    "id": 96,
-    "name": "Formaldehyde",
-    "casNumber": "50-00-0",
-    "amount": 10,
-    "location": "Location 46"
+    "Id": 96,
+    "Name": "Formaldehyde",
+    "CasNumber": "50-00-0",
+    "Amount": 10,
+    "Location": "Location 46"
   },
   {
-    "id": 97,
-    "name": "Ethanol",
-    "casNumber": "64-17-5",
-    "amount": 20,
-    "location": "Location 47"
+    "Id": 97,
+    "Name": "Ethanol",
+    "CasNumber": "64-17-5",
+    "Amount": 20,
+    "Location": "Location 47"
   },
   {
-    "id": 98,
-    "name": "Methanol",
-    "casNumber": "67-56-1",
-    "amount": 30,
-    "location": "Location 48"
+    "Id": 98,
+    "Name": "Methanol",
+    "CasNumber": "67-56-1",
+    "Amount": 30,
+    "Location": "Location 48"
   },
   {
-    "id": 99,
-    "name": "Acetone",
-    "casNumber": "67-64-1",
-    "amount": 40,
-    "location": "Location 49"
+    "Id": 99,
+    "Name": "Acetone",
+    "CasNumber": "67-64-1",
+    "Amount": 40,
+    "Location": "Location 49"
   },
   {
-    "id": 100,
-    "name": "Benzene",
-    "casNumber": "71-43-2",
-    "amount": 50,
-    "location": "Location 50"
+    "Id": 100,
+    "Name": "Benzene",
+    "CasNumber": "71-43-2",
+    "Amount": 50,
+    "Location": "Location 50"
   }
 ]

@@ -3,6 +3,24 @@
   <thead>
     <tr>
       <th>
+        <input type="text" [(ngModel)]="searchName" placeholder="Search by name" />
+      </th>
+      <th>
+        <input type="text" [(ngModel)]="searchCas" placeholder="Search by CAS-number" />
+      </th>
+      <th>
+        <input type="number" [(ngModel)]="searchAmount" placeholder="Maximum amount" />
+      </th>
+      <th>
+        <input type="text" [(ngModel)]="searchLocation" placeholder="Search by location" />
+      </th>
+      <th>
+        <button (click)="applyFilters()">Search</button>
+        <button (click)="clearFilters()">Reset</button>
+      </th>
+    </tr>
+    <tr>
+      <th>
         <button (click)="sortUnits('name')">
           Name {{ sortColumn === 'name' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
         </button>
@@ -42,4 +60,4 @@
   }
   <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next Page</button>
 </div>
-<h2>{{ message }}</h2>
+<h2>{{ message }} + {{ searchName }} + {{ searchCas }} + {{ searchAmount }} + {{ searchLocation }}</h2>

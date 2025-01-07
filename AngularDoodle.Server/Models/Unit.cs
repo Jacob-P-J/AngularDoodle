@@ -2,16 +2,17 @@
 
 namespace AngularDoodle.Server.Models
 {
+    // A model for a unit object
     public class Unit
     {
         [Required]
-        public int id { get; set; }
+        public int Id { get; set; }
         [Required]
-        public string? name { get; set; }
-        public string? casNumber { get; set; }
+        public string? Name { get; set; }
+        public string? CasNumber { get; set; }
         [Required]
-        public int amount { get; set; }
+        public int Amount { get; set; }
         [Required]
-        public string? location { get; set; }
+        public string? Location { get; set; }
     }
 }

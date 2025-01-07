@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,7 +7,7 @@ export class HttpService {
   private baseUrl = 'https://localhost:7010';
   constructor(private http: HttpClient) { }
 
-  getFromServer<T>(url: string): Observable<T> {
-    return this.http.get<T>(`${this.baseUrl}/${url}`);
+  getFromServer<T>(url: string, params?: HttpParams): Observable<T> {
+    return this.http.get<T>(`${this.baseUrl}/${url}`, {params});
   }
 }
