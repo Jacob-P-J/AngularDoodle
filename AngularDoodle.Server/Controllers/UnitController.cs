@@ -31,31 +31,11 @@ namespace AngularDoodle.Server.Controllers
         {
             try
             {
-                var units = await GetUnitsFromJsonFile();
-
-                if (!string.IsNullOrEmpty(searchName))
-                {
-                    units = units.Where(u => u.Name?.Contains(searchName, StringComparison.OrdinalIgnoreCase) == true).ToList();
-                }
-
-                if (!string.IsNullOrEmpty(searchCas))
-                {
-                    units = units.Where(u => u.CasNumber?.Contains(searchCas, StringComparison.OrdinalIgnoreCase) == true).ToList();
-                }
-
-                if (searchAmount != null)
-                {
-                    units = units.Where(u => u.Amount <= searchAmount).ToList();
-                }
-
-                if (!string.IsNullOrEmpty(searchLocation))
-                {
-                    units = units.Where(u => u.Location?.Contains(searchLocation, StringComparison.OrdinalIgnoreCase) == true).ToList();
-                }
+                var units = await GetUnitsFromJsonFile(searchName, searchCas, searchAmount, searchLocation);
 
                 units = sortDirection.ToLower() == "asc"
-                    ? units.OrderBy(u => u.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance).GetValue(u, null)).ToList()
-                    : units.OrderByDescending(u => u.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance).GetValue(u, null)).ToList();
+                    ? units.OrderBy(u => u.GetType().GetProperty(sortColumn).GetValue(u, null)).ToList()
+                    : units.OrderByDescending(u => u.GetType().GetProperty(sortColumn).GetValue(u, null)).ToList();
 
                 return Ok(units);
             }
@@ -68,14 +48,41 @@ namespace AngularDoodle.Server.Controllers
         }
 
 
-        private async Task<List<Unit>> GetUnitsFromJsonFile()
+        private async Task<List<Unit>> GetUnitsFromJsonFile(string searchName, string searchCas, int? searchAmount, string searchLocation)
         {
             try
             {
                 using (var reader = new StreamReader(_filePath))
                 {
                     var jsonFile = await reader.ReadToEndAsync();
-                    return JsonSerializer.Deserialize<List<Unit>>(jsonFile);
+                    var units = JsonSerializer.Deserialize<List<Unit>>(jsonFile);
+
+                    if (units == null)
+                    {
+                        return new List<Unit>();
+                    }
+
+                    if (!string.IsNullOrEmpty(searchName))
+                    {
+                        units = units.Where(u => u.Name?.Contains(searchName, StringComparison.OrdinalIgnoreCase) == true).ToList();
+                    }
+
+                    if (!string.IsNullOrEmpty(searchCas))
+                    {
+                        units = units.Where(u => u.CasNumber?.Contains(searchCas, StringComparison.OrdinalIgnoreCase) == true).ToList();
+                    }
+
+                    if (searchAmount.HasValue)
+                    {
+                        units = units.Where(u => u.Amount <= searchAmount).ToList();
+                    }
+
+                    if (!string.IsNullOrEmpty(searchLocation))
+                    {
+                        units = units.Where(u => u.Location?.Contains(searchLocation, StringComparison.OrdinalIgnoreCase) == true).ToList();
+                    }
+
+                    return units;
                 }
             }
             catch (Exception ex)
@@ -84,7 +91,6 @@ namespace AngularDoodle.Server.Controllers
                 Console.WriteLine($"Error reading JSON file: {ex.Message}");
                 throw;
             }
-
         }
     }
 }

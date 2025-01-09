@@ -9,7 +9,7 @@
         <input type="text" [(ngModel)]="searchCas" placeholder="Search by CAS-number" />
       </th>
       <th>
-        <input type="number" [(ngModel)]="searchAmount" placeholder="Maximum amount" />
+        <input type="number" [(ngModel)]="searchAmount" placeholder="Maximum amount" pattern="\d*" step="1" />
       </th>
       <th>
         <input type="text" [(ngModel)]="searchLocation" placeholder="Search by location" />

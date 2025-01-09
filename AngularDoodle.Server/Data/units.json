@@ -4,6 +4,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 10,
+    "AmountUnit": "g",
     "Location": "Location 1"
   },
   {
@@ -11,6 +12,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 20,
+    "AmountUnit": "g",
     "Location": "Location 2"
   },
   {
@@ -18,6 +20,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 30,
+    "AmountUnit": "g",
     "Location": "Location 3"
   },
   {
@@ -25,6 +28,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 40,
+    "AmountUnit": "g",
     "Location": "Location 4"
   },
   {
@@ -32,6 +36,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 50,
+    "AmountUnit": "g",
     "Location": "Location 5"
   },
   {
@@ -39,6 +44,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 60,
+    "AmountUnit": "g",
     "Location": "Location 6"
   },
   {
@@ -46,6 +52,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 70,
+    "AmountUnit": "g",
     "Location": "Location 7"
   },
   {
@@ -53,6 +60,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 80,
+    "AmountUnit": "g",
     "Location": "Location 8"
   },
   {
@@ -60,6 +68,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 90,
+    "AmountUnit": "g",
     "Location": "Location 9"
   },
   {
@@ -67,6 +76,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 100,
+    "AmountUnit": "g",
     "Location": "Location 10"
   },
   {
@@ -74,6 +84,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 15,
+    "AmountUnit": "g",
     "Location": "Location 11"
   },
   {
@@ -81,6 +92,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 25,
+    "AmountUnit": "g",
     "Location": "Location 12"
   },
   {
@@ -88,6 +100,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 35,
+    "AmountUnit": "g",
     "Location": "Location 13"
   },
   {
@@ -95,6 +108,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 45,
+    "AmountUnit": "g",
     "Location": "Location 14"
   },
   {
@@ -102,6 +116,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 55,
+    "AmountUnit": "g",
     "Location": "Location 15"
   },
   {
@@ -109,6 +124,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 65,
+    "AmountUnit": "g",
     "Location": "Location 16"
   },
   {
@@ -116,6 +132,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 75,
+    "AmountUnit": "g",
     "Location": "Location 17"
   },
   {
@@ -123,6 +140,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 85,
+    "AmountUnit": "g",
     "Location": "Location 18"
   },
   {
@@ -130,6 +148,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 95,
+    "AmountUnit": "g",
     "Location": "Location 19"
   },
   {
@@ -137,6 +156,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 105,
+    "AmountUnit": "g",
     "Location": "Location 20"
   },
   {
@@ -144,6 +164,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 10,
+    "AmountUnit": "g",
     "Location": "Location 1"
   },
   {
@@ -151,6 +172,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 20,
+    "AmountUnit": "g",
     "Location": "Location 2"
   },
   {
@@ -158,6 +180,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 30,
+    "AmountUnit": "g",
     "Location": "Location 3"
   },
   {
@@ -165,6 +188,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 40,
+    "AmountUnit": "g",
     "Location": "Location 4"
   },
   {
@@ -172,6 +196,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 50,
+    "AmountUnit": "g",
     "Location": "Location 5"
   },
   {
@@ -179,6 +204,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 15,
+    "AmountUnit": "g",
     "Location": "Location 26"
   },
   {
@@ -186,6 +212,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 25,
+    "AmountUnit": "g",
     "Location": "Location 27"
   },
   {
@@ -193,6 +220,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 35,
+    "AmountUnit": "g",
     "Location": "Location 28"
   },
   {
@@ -200,6 +228,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 45,
+    "AmountUnit": "g",
     "Location": "Location 29"
   },
   {
@@ -207,6 +236,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 55,
+    "AmountUnit": "g",
     "Location": "Location 30"
   },
   {
@@ -214,6 +244,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 65,
+    "AmountUnit": "g",
     "Location": "Location 31"
   },
   {
@@ -221,6 +252,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 75,
+    "AmountUnit": "g",
     "Location": "Location 32"
   },
   {
@@ -228,6 +260,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 85,
+    "AmountUnit": "g",
     "Location": "Location 33"
   },
   {
@@ -235,6 +268,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 95,
+    "AmountUnit": "g",
     "Location": "Location 34"
   },
   {
@@ -242,6 +276,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 105,
+    "AmountUnit": "g",
     "Location": "Location 35"
   },
   {
@@ -249,6 +284,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 10,
+    "AmountUnit": "g",
     "Location": "Location 36"
   },
   {
@@ -256,6 +292,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 20,
+    "AmountUnit": "g",
     "Location": "Location 37"
   },
   {
@@ -263,6 +300,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 30,
+    "AmountUnit": "g",
     "Location": "Location 38"
   },
   {
@@ -270,6 +308,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 40,
+    "AmountUnit": "g",
     "Location": "Location 39"
   },
   {
@@ -277,6 +316,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 50,
+    "AmountUnit": "g",
     "Location": "Location 40"
   },
   {
@@ -284,6 +324,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 60,
+    "AmountUnit": "g",
     "Location": "Location 41"
   },
   {
@@ -291,6 +332,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 70,
+    "AmountUnit": "g",
     "Location": "Location 42"
   },
   {
@@ -298,6 +340,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 80,
+    "AmountUnit": "g",
     "Location": "Location 43"
   },
   {
@@ -305,6 +348,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 90,
+    "AmountUnit": "g",
     "Location": "Location 44"
   },
   {
@@ -312,6 +356,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 100,
+    "AmountUnit": "g",
     "Location": "Location 45"
   },
   {
@@ -319,6 +364,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 15,
+    "AmountUnit": "g",
     "Location": "Location 46"
   },
   {
@@ -326,6 +372,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 25,
+    "AmountUnit": "g",
     "Location": "Location 47"
   },
   {
@@ -333,6 +380,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 35,
+    "AmountUnit": "g",
     "Location": "Location 48"
   },
   {
@@ -340,6 +388,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 45,
+    "AmountUnit": "g",
     "Location": "Location 49"
   },
   {
@@ -347,6 +396,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 55,
+    "AmountUnit": "g",
     "Location": "Location 50"
   },
   {
@@ -354,6 +404,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 65,
+    "AmountUnit": "ml",
     "Location": "Location 1"
   },
   {
@@ -361,6 +412,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 75,
+    "AmountUnit": "ml",
     "Location": "Location 2"
   },
   {
@@ -368,6 +420,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 85,
+    "AmountUnit": "ml",
     "Location": "Location 3"
   },
   {
@@ -375,6 +428,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 95,
+    "AmountUnit": "ml",
     "Location": "Location 4"
   },
   {
@@ -382,6 +436,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 105,
+    "AmountUnit": "ml",
     "Location": "Location 5"
   },
   {
@@ -389,6 +444,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 10,
+    "AmountUnit": "ml",
     "Location": "Location 6"
   },
   {
@@ -396,6 +452,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 20,
+    "AmountUnit": "ml",
     "Location": "Location 7"
   },
   {
@@ -403,6 +460,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 30,
+    "AmountUnit": "ml",
     "Location": "Location 8"
   },
   {
@@ -410,6 +468,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 40,
+    "AmountUnit": "ml",
     "Location": "Location 9"
   },
   {
@@ -417,6 +476,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 50,
+    "AmountUnit": "ml",
     "Location": "Location 10"
   },
   {
@@ -424,6 +484,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 60,
+    "AmountUnit": "ml",
     "Location": "Location 11"
   },
   {
@@ -431,6 +492,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 70,
+    "AmountUnit": "ml",
     "Location": "Location 12"
   },
   {
@@ -438,6 +500,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 80,
+    "AmountUnit": "ml",
     "Location": "Location 13"
   },
   {
@@ -445,6 +508,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 90,
+    "AmountUnit": "ml",
     "Location": "Location 14"
   },
   {
@@ -452,6 +516,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 100,
+    "AmountUnit": "ml",
     "Location": "Location 15"
   },
   {
@@ -459,6 +524,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 15,
+    "AmountUnit": "ml",
     "Location": "Location 16"
   },
   {
@@ -466,6 +532,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 25,
+    "AmountUnit": "ml",
     "Location": "Location 17"
   },
   {
@@ -473,6 +540,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 35,
+    "AmountUnit": "ml",
     "Location": "Location 18"
   },
   {
@@ -480,6 +548,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 45,
+    "AmountUnit": "ml",
     "Location": "Location 19"
   },
   {
@@ -487,6 +556,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 55,
+    "AmountUnit": "ml",
     "Location": "Location 20"
   },
   {
@@ -494,6 +564,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 65,
+    "AmountUnit": "ml",
     "Location": "Location 21"
   },
   {
@@ -501,6 +572,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 75,
+    "AmountUnit": "ml",
     "Location": "Location 22"
   },
   {
@@ -508,6 +580,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 85,
+    "AmountUnit": "ml",
     "Location": "Location 23"
   },
   {
@@ -515,6 +588,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 95,
+    "AmountUnit": "ml",
     "Location": "Location 24"
   },
   {
@@ -522,6 +596,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 105,
+    "AmountUnit": "ml",
     "Location": "Location 25"
   },
   {
@@ -529,6 +604,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 10,
+    "AmountUnit": "ml",
     "Location": "Location 26"
   },
   {
@@ -536,6 +612,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 20,
+    "AmountUnit": "ml",
     "Location": "Location 27"
   },
   {
@@ -543,6 +620,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 30,
+    "AmountUnit": "ml",
     "Location": "Location 28"
   },
   {
@@ -550,6 +628,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 40,
+    "AmountUnit": "ml",
     "Location": "Location 29"
   },
   {
@@ -557,6 +636,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 50,
+    "AmountUnit": "ml",
     "Location": "Location 30"
   },
   {
@@ -564,6 +644,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 60,
+    "AmountUnit": "ml",
     "Location": "Location 31"
   },
   {
@@ -571,6 +652,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 70,
+    "AmountUnit": "ml",
     "Location": "Location 32"
   },
   {
@@ -578,6 +660,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 80,
+    "AmountUnit": "ml",
     "Location": "Location 33"
   },
   {
@@ -585,6 +668,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 90,
+    "AmountUnit": "ml",
     "Location": "Location 34"
   },
   {
@@ -592,6 +676,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 100,
+    "AmountUnit": "ml",
     "Location": "Location 35"
   },
   {
@@ -599,6 +684,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 15,
+    "AmountUnit": "ml",
     "Location": "Location 36"
   },
   {
@@ -606,6 +692,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 25,
+    "AmountUnit": "ml",
     "Location": "Location 37"
   },
   {
@@ -613,6 +700,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 35,
+    "AmountUnit": "ml",
     "Location": "Location 38"
   },
   {
@@ -620,6 +708,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 45,
+    "AmountUnit": "ml",
     "Location": "Location 39"
   },
   {
@@ -627,6 +716,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 55,
+    "AmountUnit": "ml",
     "Location": "Location 40"
   },
   {
@@ -634,6 +724,7 @@
     "Name": "Toluene",
     "CasNumber": "108-88-3",
     "Amount": 65,
+    "AmountUnit": "ml",
     "Location": "Location 41"
   },
   {
@@ -641,6 +732,7 @@
     "Name": "Chloroform",
     "CasNumber": "67-66-3",
     "Amount": 75,
+    "AmountUnit": "ml",
     "Location": "Location 42"
   },
   {
@@ -648,6 +740,7 @@
     "Name": "Hexane",
     "CasNumber": "110-54-3",
     "Amount": 85,
+    "AmountUnit": "ml",
     "Location": "Location 43"
   },
   {
@@ -655,6 +748,7 @@
     "Name": "Phenol",
     "CasNumber": "108-95-2",
     "Amount": 95,
+    "AmountUnit": "ml",
     "Location": "Location 44"
   },
   {
@@ -662,6 +756,7 @@
     "Name": "Acetic Acid",
     "CasNumber": "64-19-7",
     "Amount": 105,
+    "AmountUnit": "ml",
     "Location": "Location 45"
   },
   {
@@ -669,6 +764,7 @@
     "Name": "Formaldehyde",
     "CasNumber": "50-00-0",
     "Amount": 10,
+    "AmountUnit": "ml",
     "Location": "Location 46"
   },
   {
@@ -676,6 +772,7 @@
     "Name": "Ethanol",
     "CasNumber": "64-17-5",
     "Amount": 20,
+    "AmountUnit": "ml",
     "Location": "Location 47"
   },
   {
@@ -683,6 +780,7 @@
     "Name": "Methanol",
     "CasNumber": "67-56-1",
     "Amount": 30,
+    "AmountUnit": "ml",
     "Location": "Location 48"
   },
   {
@@ -690,6 +788,7 @@
     "Name": "Acetone",
     "CasNumber": "67-64-1",
     "Amount": 40,
+    "AmountUnit": "ml",
     "Location": "Location 49"
   },
   {
@@ -697,6 +796,7 @@
     "Name": "Benzene",
     "CasNumber": "71-43-2",
     "Amount": 50,
+    "AmountUnit": "ml",
     "Location": "Location 50"
   }
 ]
