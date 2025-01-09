@@ -20,7 +20,7 @@ namespace AngularDoodle.Server.Controllers
 
         [HttpGet(Name = "GetUnits")]
         // GET request that returns a list of units
-        // The list is read from a JSON file and can be sorted by a column
+        // The units can be sorted by a column, and filtered by name, CAS number, amount, and location
         public async Task<IActionResult> GetUnits(
             [FromQuery] string sortColumn = "Id",
             [FromQuery] string sortDirection = "asc",
