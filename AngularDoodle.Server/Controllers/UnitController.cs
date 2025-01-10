@@ -22,7 +22,7 @@ namespace AngularDoodle.Server.Controllers
         // GET request that returns a list of units
         // The units can be sorted by a column, and filtered by name, CAS number, amount, and location
         public async Task<IActionResult> GetUnits(
-            [FromQuery] string sortColumn = "Id",
+            [FromQuery] string sortColumn = "id",
             [FromQuery] string sortDirection = "asc",
             [FromQuery] string searchName = "",
             [FromQuery] string searchCas = "",
@@ -33,15 +33,15 @@ namespace AngularDoodle.Server.Controllers
             {
                 var units = await GetUnitsFromJsonFile(searchName, searchCas, searchAmount, searchLocation);
 
-                units = sortDirection.ToLower() == "asc"
-                    ? units.OrderBy(u => u.GetType().GetProperty(sortColumn).GetValue(u, null)).ToList()
-                    : units.OrderByDescending(u => u.GetType().GetProperty(sortColumn).GetValue(u, null)).ToList();
+                units = sortDirection == "asc"
+                    ? units.OrderBy(unit => unit.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)?.GetValue(unit, null)).ToList()
+                    : units.OrderByDescending(unit => unit.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)?.GetValue(unit, null)).ToList();
 
                 return Ok(units);
             }
             catch (Exception ex)
             {
-                // Log the exception (you can use a logging framework here)
+                // Log the exception
                 Console.WriteLine($"Error: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
@@ -87,7 +87,7 @@ namespace AngularDoodle.Server.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception (you can use a logging framework here)
+                // Log the exception
                 Console.WriteLine($"Error reading JSON file: {ex.Message}");
                 throw;
             }

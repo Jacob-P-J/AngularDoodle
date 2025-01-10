@@ -15,7 +15,7 @@ namespace AngularDoodle.Server.Models
         [Required]
         public required int Amount { get; set; }
         [Required]
-        public required UnitType AmountUnit { get; set; }
+        public required string AmountUnit { get; set; }
         [Required]
         public required string Location { get; set; }
     }

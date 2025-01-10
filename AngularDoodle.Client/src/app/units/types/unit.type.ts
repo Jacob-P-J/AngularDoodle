@@ -3,5 +3,6 @@ export interface Unit {
   name: string;
   casNumber: string;
   amount: number;
+  amountUnit: string;
   location: string;
 }

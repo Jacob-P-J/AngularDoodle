@@ -13,7 +13,7 @@ export class UnitService {
   private apiUrl = 'unit';
   constructor(private httpService: HttpService) { }
 
-  getUnits(sortColumn: string = 'id', sortDirection: string = 'asc', searchName: string, searchCas: string, searchAmount: number | null, searchLocation: string): Observable<Unit[]> {
+  getUnits(sortColumn: string, sortDirection: string, searchName: string, searchCas: string, searchAmount: number | null, searchLocation: string): Observable<Unit[]> {
     let params = new HttpParams()
       .set('sortColumn', sortColumn)
       .set('sortDirection', sortDirection)
