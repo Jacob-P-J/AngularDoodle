@@ -5,40 +5,57 @@ using System.Reflection;
 using System.Text.Json;
 
 using AngularDoodle.Server.Models;
-using System.Runtime.CompilerServices;
 
 namespace AngularDoodle.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     [EnableCors("AllowAngularApp")]
-    // A controller that returns a list of units
+    // A controller that handles requests for units
     public class UnitController : ControllerBase
     {
         
         private readonly string _filePath = "Data/units.json";
 
         [HttpGet(Name = "GetUnits")]
-        // GET request that returns a list of units
-        // The units can be sorted by a column, and filtered by name, CAS number, amount, and location
+        // GET request that returns a response object with a list of units and pagination information
         public async Task<IActionResult> GetUnits(
             [FromQuery] string sortColumn = "id",
             [FromQuery] string sortDirection = "asc",
             [FromQuery] string searchName = "",
             [FromQuery] string searchCas = "",
             [FromQuery] int? searchAmount = null,
-            [FromQuery] string searchLocation = "")
+            [FromQuery] string searchLocation = "",
+            [FromQuery] int pageNumber = 1,
+            [FromQuery] int pageSize = 25)
         {
             try
             {
+                // Get the list of units from the JSON file
                 var units = await GetUnitsFromJsonFile(searchName, searchCas, searchAmount, searchLocation);
 
+                // Applies the sorting
                 units = sortDirection == "asc"
                     ? units.OrderBy(unit => unit.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)?.GetValue(unit, null)).ToList()
                     : units.OrderByDescending(unit => unit.GetType().GetProperty(sortColumn, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)?.GetValue(unit, null)).ToList();
 
-                return Ok(units);
+
+                // Applies the pagination
+                int totalUnits = units.Count;
+                int totalPages = (int)Math.Ceiling(totalUnits / (double)pageSize);
+                var pagedUnits = units.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
+                // Create the response object
+                var response = new
+                {
+                    totalPages,
+                    pageNumber,
+                    units = pagedUnits
+                };
+
+                return Ok(response);
             }
+
             catch (Exception ex)
             {
                 // Log the exception
@@ -47,7 +64,7 @@ namespace AngularDoodle.Server.Controllers
             }
         }
 
-
+        // Reads from a JSON file and returns a list of units based on search criteria
         private async Task<List<Unit>> GetUnitsFromJsonFile(string searchName, string searchCas, int? searchAmount, string searchLocation)
         {
             try

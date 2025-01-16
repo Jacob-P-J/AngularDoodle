@@ -13,18 +13,17 @@ export class UnitService {
   private apiUrl = 'unit';
   constructor(private httpService: HttpService) { }
 
-  getUnits(sortColumn: string, sortDirection: string, searchName: string, searchCas: string, searchAmount: number | null, searchLocation: string): Observable<Unit[]> {
+  getUnits(sortColumn: string, sortDirection: string, searchName: string, searchCas: string, searchAmount: number | null, searchLocation: string, pageNumber: number, pageSize: number): Observable<any> {
     let params = new HttpParams()
       .set('sortColumn', sortColumn)
       .set('sortDirection', sortDirection)
       .set('searchName', searchName)
       .set('searchCas', searchCas)
-      .set('searchLocation', searchLocation);
+      .set('searchAmount', searchAmount?.toString() || '')
+      .set('searchLocation', searchLocation)
+      .set('pageNumber', pageNumber.toString())
+      .set('pageSize', pageSize.toString());
 
-    if (searchAmount != null) {
-      params = params.set('searchAmount', searchAmount.toString());
-    }
-
-    return this.httpService.getFromServer<Unit[]>(this.apiUrl, params);
+    return this.httpService.getFromServer<any>(this.apiUrl, params);
   }
 }

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Unit } from './units/types/unit.type';
 import { UnitService } from './units/utils/unit.service';
 import { MessageService, Message } from './message.service';
-import { Page } from './pages/types/page.type';
+import { Page } from './units/types/page.type';
 
 
 @Component({
@@ -22,9 +22,7 @@ export class AppComponent {
   message: string = '';
 
   // Initiating variables for unit
-  allUnits: Unit[] = [];
   currentUnits: Unit[] = [];
-  totalNumberOfUnits: number = 0;
   sortColumn: string = '';
   sortDirection: 'asc' | 'desc' = 'asc';
 
@@ -48,10 +46,7 @@ export class AppComponent {
 
   // Gets data from server on init
   ngOnInit() {
-    this.currentPage = 1;
-    this.pageSize = 25;
     this.getMessage();
-    this.getUnits();
   }
 
   // Function to set message to message from service
@@ -68,18 +63,16 @@ export class AppComponent {
 
   // Function to set units to units from service
   getUnits() {
-    this.unitService.getUnits(this.sortColumn, this.sortDirection, this.searchName, this.searchCas, this.searchAmount, this.searchLocation).subscribe(
-      (response: Unit[]) => {
-        console.log('Response from server', response)
-        this.allUnits = response;
-        this.totalNumberOfUnits = this.allUnits.length;
-        this.totalPages = Math.ceil(this.totalNumberOfUnits / this.pageSize);
+    this.unitService.getUnits(this.sortColumn, this.sortDirection, this.searchName, this.searchCas, this.searchAmount, this.searchLocation, this.currentPage, this.pageSize).subscribe(
+      (response) => {
+        this.currentUnits = response.units;
+        this.totalPages = response.totalPages;
+        this.currentPage = response.pageNumber;
         this.pages = Array.from({ length: this.totalPages }, (_, i) => ({ pageNumber: i + 1 }));
-        this.updateDisplayedUnits();
-        console.log('Current units:', this.currentUnits)
+        console.log('Units fetched successfully', response);
       },
       (error) => {
-        console.error('Error fetching units from server', error)
+        console.error('Error fetching units from server', error);
       }
     );
   }
@@ -109,21 +102,14 @@ export class AppComponent {
     this.sortColumn = '';
     this.sortDirection = 'asc';
 
+    this.currentPage = 1;
+
     this.getUnits();
   }
 
-  updateDisplayedUnits() {
-    const startIndex = (this.currentPage - 1) * this.pageSize;
-    const endIndex = startIndex + this.pageSize;
-    this.currentUnits = this.allUnits.slice(startIndex, endIndex);
-  }
-
-  goToPage(page: number) {
-    if (page < 1 || page > this.totalPages) {
-      return;
-    }
-    this.currentPage = page;
-    this.updateDisplayedUnits();
+  goToPage(pageNumber: number) {
+    this.currentPage = pageNumber;
+    this.getUnits();
   }
 }
 
