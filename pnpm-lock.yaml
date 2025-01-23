@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@azure/msal-angular':
+        specifier: ^4.0.2
+        version: 4.0.2(@azure/msal-browser@4.0.2)(rxjs@7.8.1)
+      '@azure/msal-browser':
+        specifier: ^4.0.2
+        version: 4.0.2
       path-to-regexp:
         specifier: ^8.2.0
         version: 8.2.0
@@ -17,6 +23,20 @@ importers:
         version: 5.5.0
 
 packages:
+
+  '@azure/msal-angular@4.0.2':
+    resolution: {integrity: sha512-4uVwHRGAsNc7EZZeOepbgIqjt0m4XhELUzhUKNONxbosf7LN8FMVhNnY8O21x8nBxRQRtYlN3AHMeD7gG2eFag==}
+    peerDependencies:
+      '@azure/msal-browser': ^4.0.2
+      rxjs: ^7.0.0
+
+  '@azure/msal-browser@4.0.2':
+    resolution: {integrity: sha512-bq6PasUpJgBSOSMeSlh8gXh4LZGgAaPoJFNcu5u0zxwueh+I8NpMb9oxlCfS/8CJHyXUhTUAMLSnvThemNdyQw==}
+    engines: {node: '>=0.8.0'}
+
+  '@azure/msal-common@15.0.2':
+    resolution: {integrity: sha512-RQHmI5vOMYLNSO0ER7d/O9TojWWEn4m0YtWbL8mZthkKGQI7ALn5ONHUVTUSxSVYwGYdHGNrwiHAzQhboqwZzQ==}
+    engines: {node: '>=0.8.0'}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -119,6 +139,9 @@ packages:
     resolution: {integrity: sha512-TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ==}
     engines: {node: '>=16'}
 
+  rxjs@7.8.1:
+    resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
+
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -147,6 +170,9 @@ packages:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
 
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -161,6 +187,18 @@ packages:
     engines: {node: '>=12'}
 
 snapshots:
+
+  '@azure/msal-angular@4.0.2(@azure/msal-browser@4.0.2)(rxjs@7.8.1)':
+    dependencies:
+      '@azure/msal-browser': 4.0.2
+      rxjs: 7.8.1
+      tslib: 2.8.1
+
+  '@azure/msal-browser@4.0.2':
+    dependencies:
+      '@azure/msal-common': 15.0.2
+
+  '@azure/msal-common@15.0.2': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -258,6 +296,10 @@ snapshots:
 
   path-to-regexp@8.2.0: {}
 
+  rxjs@7.8.1:
+    dependencies:
+      tslib: 2.8.1
+
   shebang-command@2.0.0:
     dependencies:
       shebang-regex: 3.0.0
@@ -285,6 +327,8 @@ snapshots:
   strip-ansi@7.1.0:
     dependencies:
       ansi-regex: 6.1.0
+
+  tslib@2.8.1: {}
 
   which@2.0.2:
     dependencies:

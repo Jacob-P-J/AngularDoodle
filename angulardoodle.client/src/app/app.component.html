@@ -1,63 +1,71 @@
-<h1>{{ title }}</h1>
-<table>
-  <thead>
-    <tr>
-      <th>
-        <input type="text" [(ngModel)]="searchName" placeholder="Search by name" />
-      </th>
-      <th>
-        <input type="text" [(ngModel)]="searchCas" placeholder="Search by CAS-number" />
-      </th>
-      <th>
-        <input type="number" [(ngModel)]="searchAmount" placeholder="Maximum amount" pattern="\d*" step="1" />
-      </th>
-      <th>
-        <input type="text" [(ngModel)]="searchLocation" placeholder="Search by location" />
-      </th>
-      <th>
-        <button (click)="applyFilters()">Search</button>
-        <button (click)="clearFilters()">Reset</button>
-      </th>
-    </tr>
-    <tr>
-      <th>
-        <button (click)="sortUnits('name')">
-          Name {{ sortColumn === 'name' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
-        </button>
-      </th>
-      <th>
-        <button (click)="sortUnits('casNumber')">
-          CAS Number {{ sortColumn === 'casNumber' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
-        </button>
-      </th>
-      <th>
-        <button (click)="sortUnits('amount')">
-          Amount {{ sortColumn === 'amount' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
-        </button>
-      </th>
-      <th>
-        <button (click)="sortUnits('location')">
-          Location {{ sortColumn === 'location' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
-        </button>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    @for (unit of currentUnits; track unit.id) {
-    <tr>
-      <td>{{ unit.name }}</td>
-      <td>{{ unit.casNumber }}</td>
-      <td>{{ unit.amount }} {{ unit.amountUnit }}</td>
-      <td>{{ unit.location }}</td>
-    </tr>
-    }
-  </tbody>
-</table>
-<div class="pagination">
-  <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous Page</button>
-  @for (page of pages; track page.pageNumber) {
-  <button (click)="goToPage(page.pageNumber)" [disabled]="page.pageNumber === currentPage">{{ page.pageNumber }}</button>
-  }
-  <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next Page</button>
+<div class="topbar">
+  <h1>{{ title }}</h1>
 </div>
-<h2>{{ message }} + {{ searchName }} + {{ searchCas }} + {{ searchAmount }} + {{ searchLocation }}</h2>
+<div class="container">
+    <div class="sidemenu">
+      <p>Nothing to see here yet</p>
+    </div>
+    <div class="content">
+      <h2>Beholdningsliste</h2>
+      <div class="search-box">
+        <h3>Search</h3>
+        <div class="search-fields">
+          <div class="column">
+            <input type="text" [(ngModel)]="searchName" placeholder="Search by name" />
+            <input type="text" [(ngModel)]="searchCas" placeholder="Search by CAS-number" />
+          </div>
+          <div class="column">
+            <input type="number" [(ngModel)]="searchAmount" placeholder="Maximum amount" />
+            <input type="text" [(ngModel)]="searchLocation" placeholder="Search by location" />
+          </div>
+          <div class="search-buttons">
+            <button (click)="applyFilters()">Search</button>
+            <button (click)="clearFilters()">Reset</button>
+          </div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="left-align">
+              <button class="left-align" (click)="sortUnits('name')">
+                Name {{ sortColumn === 'name' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
+              </button>
+            </th>
+            <th class="right-align">
+              <button class="right-align" (click)="sortUnits('casNumber')">
+                CAS Number {{ sortColumn === 'casNumber' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
+              </button>
+            </th>
+            <th class="right-align">
+              <button class="right-align" (click)="sortUnits('amount')">
+                Amount {{ sortColumn === 'amount' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
+              </button>
+            </th>
+            <th class="left-align">
+              <button class="left-align" (click)="sortUnits('location')">
+                Location {{ sortColumn === 'location' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (unit of currentUnits; track unit.id) {
+          <tr>
+            <td class="left-align">{{ unit.name }}</td>
+            <td class="right-align">{{ unit.casNumber }}</td>
+            <td class="right-align">{{ unit.amount }} {{ unit.amountUnit }}</td>
+            <td class="left-align">{{ unit.location }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous Page</button>
+        @for (page of pages; track page.pageNumber) {
+        <button (click)="goToPage(page.pageNumber)" [disabled]="page.pageNumber === currentPage">{{ page.pageNumber }}</button>
+        }
+        <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next Page</button>
+      </div>
+    </div>
+</div>

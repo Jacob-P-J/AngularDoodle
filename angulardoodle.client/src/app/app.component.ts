@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { Unit } from './units/types/unit.type';
@@ -15,7 +15,7 @@ import { Page } from './units/types/page.type';
 })
 export class AppComponent {
   // Naming of title
-  title = 'AngularDoodle.client';
+  title = 'Kemibrug';
 
 
   // Initiating variable message
@@ -47,6 +47,18 @@ export class AppComponent {
   // Gets data from server on init
   ngOnInit() {
     this.getMessage();
+    this.setViewportHeight();
+  }
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.setViewportHeight();    
+  }
+
+  setViewportHeight() {
+    const vh = window.innerHeight;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
 
   // Function to set message to message from service
@@ -112,4 +124,3 @@ export class AppComponent {
     this.getUnits();
   }
 }
-
