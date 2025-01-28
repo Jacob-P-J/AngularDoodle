@@ -46,7 +46,6 @@ export class AppComponent {
 
   // Gets data from server on init
   ngOnInit() {
-    this.getMessage();
     this.setViewportHeight();
   }
 
@@ -59,18 +58,6 @@ export class AppComponent {
   setViewportHeight() {
     const vh = window.innerHeight;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-
-  // Function to set message to message from service
-  getMessage() {
-    this.messageService.getMessageFromServer().subscribe(
-      (response: Message) => {
-        this.message = response.text;
-      },
-      (error) => {
-        console.error('Error fetching message from server', error)
-      }
-    );
   }
 
   // Function to set units to units from service

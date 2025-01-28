@@ -8,7 +8,7 @@ namespace AngularDoodle.Server.Controllers
     [Route("[controller]")]
     [EnableCors("AllowAngularApp")]
     // A controller that returns a message from the server
-    // Currently, used to test the connection between the Angular app and the server
+    // Currently not in use.
     // Potential furture use cases include returning error messages
     public class MessageController : ControllerBase
     {

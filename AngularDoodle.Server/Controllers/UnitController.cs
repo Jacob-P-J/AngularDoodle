@@ -18,7 +18,22 @@ namespace AngularDoodle.Server.Controllers
         private readonly string _filePath = "Data/units.json";
 
         [HttpGet(Name = "GetUnits")]
-        // GET request that returns a response object with a list of units and pagination information
+        /// <summary>
+        /// GET request that returns a response object with a list of units and pagination information
+        /// </summary>
+        /// <!-- sorting parameters -->
+        /// <param name="sortColumn">The column to sort by</param>
+        /// <param name="sortDirection">The direction to sort by</param>
+        /// <!-- search parameters -->
+        /// <param name="searchName">The search criteria for name of units</param>
+        /// <param name="searchCas">The search criteria for CAS number of units</param>
+        /// <param name="searchAmount">The search criteria for maximum amount of a unit</param>
+        /// <param name="searchLocation">The search criteria for location of units</param>
+        /// <!-- pagination parameters -->
+        /// <param name="pageNumber">The page number to return</param>
+        /// <param name="pageSize">The number of units to return per page</param>
+        /// <!-- response -->
+        /// <returns>A response object with a list of units and pagination information</returns>
         public async Task<IActionResult> GetUnits(
             [FromQuery] string sortColumn = "id",
             [FromQuery] string sortDirection = "asc",
@@ -64,7 +79,14 @@ namespace AngularDoodle.Server.Controllers
             }
         }
 
-        // Reads from a JSON file and returns a list of units based on search criteria
+        /// <summary>
+        /// Reads from a JSON file and returns a list of units based on search criteria
+        /// </summary>
+        /// <param name="searchName"></param>
+        /// <param name="searchCas"></param>
+        /// <param name="searchAmount"></param>
+        /// <param name="searchLocation"></param>
+        /// <returns>A list of units based on search criteria</returns>
         private async Task<List<Unit>> GetUnitsFromJsonFile(string searchName, string searchCas, int? searchAmount, string searchLocation)
         {
             try

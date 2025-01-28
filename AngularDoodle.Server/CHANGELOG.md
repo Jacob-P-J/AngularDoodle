@@ -1,3 +1,5 @@
+TODO: Repurpose this file to document changes to the project.
+
 This file explains how Visual Studio created the project.
 
 The following steps were used to generate this project:
