@@ -18,4 +18,5 @@ namespace AngularDoodle.Server
         public decimal Amount { get; set; }
         public string Location { get; set; }
     }
-}
+     
+    }
