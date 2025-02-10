@@ -62,9 +62,6 @@
       </table>
       <div class="pagination">
         <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous Page</button>
-        @for (page of pages; track page.pageNumber) {
-        <button (click)="goToPage(page.pageNumber)" [disabled]="page.pageNumber === currentPage">{{ page.pageNumber }}</button>
-        }
         <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next Page</button>
       </div>
     </div>

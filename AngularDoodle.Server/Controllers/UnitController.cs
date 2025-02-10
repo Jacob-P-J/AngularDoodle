@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AngularDoodle.Server;
 using System.Reflection;
+using System.Linq;
 
 namespace AngularDoodle.Server.Controllers
 {
@@ -47,9 +48,14 @@ namespace AngularDoodle.Server.Controllers
                     query = query.Where(u => u.Location.Contains(searchLocation));
 
                 // Dynamisk sortering
-                query = sortDirection.ToLower() == "asc"
-                    ? query.OrderBy(e => EF.Property<object>(e, sortColumn))
-                    : query.OrderByDescending(e => EF.Property<object>(e, sortColumn));
+                query = sortColumn.ToLower() switch
+                {
+                    "name" => sortDirection.ToLower() == "asc" ? query.OrderBy(u => u.Name_DK) : query.OrderByDescending( u =>  u.Name_DK),
+                    "casnumber" => sortDirection.ToLower() == "asc" ? query.OrderBy(u => u.CasNumber) : query.OrderByDescending ( u => u.CasNumber),
+                    "amount" => sortDirection.ToLower() == "asc" ? query.OrderBy(u => u.Amount) : query.OrderByDescending(u => u.Amount),
+                    "location" => sortDirection.ToLower() == "asc" ? query?.OrderBy(u => u.Location) : query?.OrderByDescending(u => u.Location),
+                    _ => query.OrderBy(u => u.Id),
+                };
 
                 // Paginering
                 int totalUnits = await query.CountAsync();
