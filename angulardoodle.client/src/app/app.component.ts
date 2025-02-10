@@ -64,6 +64,7 @@ export class AppComponent {
   getUnits() {
     this.unitService.getUnits(this.sortColumn, this.sortDirection, this.searchName, this.searchCas, this.searchAmount, this.searchLocation, this.currentPage, this.pageSize).subscribe(
       (response) => {
+        console.log('API Response:', response);
         this.currentUnits = response.units;
         this.totalPages = response.totalPages;
         this.currentPage = response.pageNumber;
