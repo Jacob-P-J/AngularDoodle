@@ -1,7 +1,7 @@
 export interface Unit {
-  id: number;
-  name: string;
-  casNumber: string;
+  id: string;
+  name_DK: string;
+  casNumber?: string;
   amount: number;
   amountUnit: string;
   location: string;

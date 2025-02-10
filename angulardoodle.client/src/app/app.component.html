@@ -29,7 +29,7 @@
           <tr>
             <th class="left-align">
               <button class="left-align" (click)="sortUnits('name')">
-                Name {{ sortColumn === 'name' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
+                Name {{ sortColumn === 'name_DK' ? (sortDirection === 'asc' ? '▲' : '▼') : '' }}
               </button>
             </th>
             <th class="right-align">
@@ -52,9 +52,9 @@
         <tbody>
           @for (unit of currentUnits; track unit.id) {
           <tr>
-            <td class="left-align">{{ unit.name }}</td>
+            <td class="left-align">{{ unit.name_DK }}</td>
             <td class="right-align">{{ unit.casNumber }}</td>
-            <td class="right-align">{{ unit.amount }} {{ unit.amountUnit }}</td>
+            <td class="right-align">{{ unit.amount }}</td>
             <td class="left-align">{{ unit.location }}</td>
           </tr>
           }
@@ -62,9 +62,6 @@
       </table>
       <div class="pagination">
         <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous Page</button>
-        @for (page of pages; track page.pageNumber) {
-        <button (click)="goToPage(page.pageNumber)" [disabled]="page.pageNumber === currentPage">{{ page.pageNumber }}</button>
-        }
         <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next Page</button>
       </div>
     </div>
