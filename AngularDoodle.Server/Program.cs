@@ -4,17 +4,13 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Identity.Web;
 using Microsoft.EntityFrameworkCore;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-  //  .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+//    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
 
-
-builder.Services.AddDbContext<AngularDoodle.Server.ApplicationDbContext>(options => 
-options.UseSqlServer(builder.Configuration.GetConnectionString("KemibrugV2Database")));
-
-
+builder.Services.AddDbContext<AngularDoodle.Server.ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("KemibrugV2Database")));
 
 // Add controllers to the container
 builder.Services.AddControllers();
@@ -28,12 +24,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularApp",
         policy =>
         {
-            policy.WithOrigins("https://localhost:50015")  
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
+            policy.WithOrigins("https://localhost:50015", "https://127.0.0.1:50015")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
         }
-     );
+    );
 });
 
 var app = builder.Build();
